@@ -1,0 +1,16 @@
+<article class="large-body">
+    <h1 data-id="{{id}}">
+        {{note}}
+    </h1>
+    <p class="description">
+        {{description}}
+    </p>
+</article>
+<sidebar class="sidebar">
+    {{#each data as |note|}}
+        <div class="row" data-id="{{note.id}}">
+            <input type="text" placeholder="{{note.note}}">
+            <input type="text" placeholder="{{note.shortDescription}}">
+        </div>
+    {{/each}}
+</sidebar>
