@@ -18,5 +18,5 @@ fs.readFile(fileLoc, "utf-8", function (err, data) {
 });
 
 db.update = async function () {
-    await fs.writeFileSync(fileLoc, "utf-8", db.data);
+    await fs.writeFileSync(fileLoc, JSON.stringify(db.data));
 };
