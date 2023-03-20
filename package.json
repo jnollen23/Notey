@@ -13,6 +13,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.16.4",
-    "express-handlebars": "^6.0.7"
+    "express-handlebars": "^6.0.7",
+    "fs-extra": "^11.1.0"
   }
 }

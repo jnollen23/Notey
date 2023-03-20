@@ -36,8 +36,10 @@ router.delete('/:ID', async (req, res) => {
     console.log(`(${id}) delete require`);
     db.data.splice(id, 1);
     console.log(`(${id}) deletion complete`);
-    db.update();
-    res.status(200);
+    for(let i = 0; i < db.data.length; i++){
+        db.data[i].id = i;
+    }
+    db.update().then(()=> res.status(200).json({message:"Delete Success"}));
 });
 
 module.exports = router;
