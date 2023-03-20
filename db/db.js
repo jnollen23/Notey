@@ -1,9 +1,10 @@
 require('dotenv').config();
 const fs = require('fs');
 const fsx = require('fs-extra');
+const path = require('path');
 const db = module.exports = {};
 
-const fileLoc = process.env.FILE_LOC  + "#" + process.pid;
+const fileLoc = path.resolve(__dirname, process.env.FILE_LOC);
 
 try {
     db.data = [];
