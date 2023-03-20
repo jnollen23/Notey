@@ -3,7 +3,7 @@ const fs = require('fs');
 const fsx = require('fs-extra');
 const db = module.exports = {};
 
-const fileLoc = process.env.FILE_LOC;
+const fileLoc = process.env.FILE_LOC  + "#" + process.pid;
 
 try {
     db.data = [];
