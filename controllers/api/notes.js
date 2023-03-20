@@ -10,11 +10,15 @@ router.post('/', (req, res) => {
     let id = req.body.ID;
     const title = req.body.title;
     const body = req.body.text;
-    if (id === undefined)
-        id = db.data.length;
+    if (id === undefined) {
+        if (db.data === undefined)
+            id = 0;
+        else
+            id = db.data.length;
+    }
 
     const newItem = {
-        title:title,
+        title: title,
         description: body,
         id: id,
         shortDescription: body.substring(0, 20) + "...",
