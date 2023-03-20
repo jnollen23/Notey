@@ -19,7 +19,7 @@ router.post('/', (req, res) => {
 
     const newItem = {
         title: title,
-        description: body,
+        text: body,
         id: id,
         shortDescription: body.substring(0, 20) + "...",
     };
